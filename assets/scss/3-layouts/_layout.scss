@@ -1,0 +1,230 @@
+// ==========================================================================
+// # Layouts: Layout
+// ==========================================================================
+
+.section {
+    position: relative;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    background: white;
+
+    &--md {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+
+    &--lg {
+        padding-top: 9rem;
+        padding-bottom: 9rem;
+    }
+}
+
+.section-bg-color {
+    &-1 {
+        background-color: white;
+    }
+    &-2 {
+        background-color: #fafafa;
+    }
+    &-3 {
+        background-color: #172143;
+        color: white;
+    }
+    &-4 {
+        background-color: #0f1c54;
+    }
+}
+
+.section-padding {
+    font-size: 14px;
+    &-top {
+        &-0 {
+            padding-top: 0rem;
+        }
+        &-1 {
+            padding-top: 1rem;
+        }
+        &-2 {
+            padding-top: 2rem;
+        }
+        &-3 {
+            padding-top: 3rem;
+        }
+        &-4 {
+            padding-top: 2rem;
+            @include media-query-min(md) {
+                padding-top: 3rem;
+            }
+
+            @include media-query-min(lg) {
+                padding-top: 4rem;
+            }
+        }
+        &-5 {
+            padding-top: 3rem;
+            @include media-query-min(md) {
+                padding-top: 4rem;
+            }
+
+            @include media-query-min(lg) {
+                padding-top: 5rem;
+            }
+        }
+        &-6 {
+            padding-top: 4rem;
+            @include media-query-min(md) {
+                padding-top: 5rem;
+            }
+
+            @include media-query-min(lg) {
+                padding-top: 6rem;
+            }
+        }
+        &-7 {
+            padding-top: 5rem;
+            @include media-query-min(md) {
+                padding-top: 6rem;
+            }
+
+            @include media-query-min(lg) {
+                padding-top: 7rem;
+            }
+        }
+        &-8 {
+            padding-top: 6rem;
+            @include media-query-min(md) {
+                padding-top: 7rem;
+            }
+
+            @include media-query-min(lg) {
+                padding-top: 8rem;
+            }
+        }
+        &-9 {
+            padding-top: 7rem;
+            @include media-query-min(md) {
+                padding-top: 8rem;
+            }
+
+            @include media-query-min(lg) {
+                padding-top: 9rem;
+            }
+        }
+    }
+
+    &-bottom {
+        &-0 {
+            padding-bottom: 0rem;
+        }
+        &-1 {
+            padding-bottom: 1rem;
+        }
+        &-2 {
+            padding-bottom: 2rem;
+        }
+        &-3 {
+            padding-bottom: 3rem;
+        }
+        &-4 {
+            padding-bottom: 2rem;
+            @include media-query-min(md) {
+                padding-bottom: 3rem;
+            }
+
+            @include media-query-min(lg) {
+                padding-bottom: 4rem;
+            }
+        }
+        &-5 {
+            padding-bottom: 3rem;
+            @include media-query-min(md) {
+                padding-bottom: 4rem;
+            }
+
+            @include media-query-min(lg) {
+                padding-bottom: 5rem;
+            }
+        }
+        &-6 {
+            padding-bottom: 4rem;
+            @include media-query-min(md) {
+                padding-bottom: 5rem;
+            }
+
+            @include media-query-min(lg) {
+                padding-bottom: 6rem;
+            }
+        }
+        &-7 {
+            padding-bottom: 5rem;
+            @include media-query-min(md) {
+                padding-bottom: 6rem;
+            }
+
+            @include media-query-min(lg) {
+                padding-bottom: 7rem;
+            }
+        }
+        &-8 {
+            padding-bottom: 6rem;
+            @include media-query-min(md) {
+                padding-bottom: 7rem;
+            }
+
+            @include media-query-min(lg) {
+                padding-bottom: 8rem;
+            }
+        }
+        &-9 {
+            padding-bottom: 8rem;
+            @include media-query-min(md) {
+                padding-bottom: 7rem;
+            }
+
+            @include media-query-min(lg) {
+                padding-bottom: 9rem;
+            }
+        }
+    }
+}
+
+// lMax: 128;
+// --sectionPaddingSmallMax: 110;
+// --sectionPaddingMin: 72;
+.callout {
+    // background: #e6007e;
+    background: linear-gradient(90deg, #df39a4 0%, #0a1b53 100%);
+}
+// container {
+//     margin-right: auto;
+//     margin-left: auto;
+//     padding-left: 15px;
+//     padding-right: 15px;
+// }
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &--is-fluid {
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 100%;
+    }
+
+    @include media-query-min(md) {
+        max-width: 950px;
+    }
+
+    @include media-query-min(xl) {
+        max-width: 1170px;
+    }
+}
+
+.columns.is-right {
+    justify-content: flex-end;
+}

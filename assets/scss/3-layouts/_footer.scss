@@ -1,0 +1,92 @@
+// ==========================================================================
+// # Layouts: Footer
+// ==========================================================================
+
+.footer {
+    // background-color: black;
+    border-top: 1px solid #c9369c;
+    font-size: 14px;
+    &__outer {
+        padding: 30px 15px 0;
+    }
+
+    &__copywright {
+        vertical-align: center;
+        display: flex;
+
+        & ul {
+            display: block;
+            @include media-query-min(md) {
+                display: flex;
+            }
+            & li {
+                padding: 0 7px;
+                @include media-query-max(md) {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+
+    &__social-icons {
+        font-size: 22px;
+    }
+
+    &__company-info {
+        display: flex;
+        margin-bottom: 7px;
+        p {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__company-info-icon {
+        margin-right: 2px;
+        @include media-query-min(md) {
+            margin-right: 12px;
+        }
+        margin-top: 2px;
+    }
+
+    &__bottom {
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #e6e6e6;
+        padding-top: 13px;
+        @include media-query-max(xs) {
+            text-align: center;
+        }
+        @include media-query-min(xs) {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &__menu {
+        list-style: none;
+        margin-bottom: 0;
+        font-size: 13px;
+
+        @include media-query-max(xs) {
+            margin-bottom: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        & li:first-child {
+            margin-left: 0;
+            padding-left: 0;
+        }
+    }
+
+    &__logos {
+        @include media-query-min(lg) {
+            text-align: end;
+        }
+    }
+
+    &__logos-img {
+        max-height: 65px;
+        // max-width: 80px;
+        margin: 0 0 0 10px;
+    }
+}

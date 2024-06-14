@@ -1,0 +1,190 @@
+// ==========================================================================
+// # Components: Phases
+// ==========================================================================
+
+.phases {
+    max-width: 800px;
+    margin: 0 auto;
+
+    &.variation-2 > {
+        .common-section__header .common-section__header-title {
+            color: white !important;
+        }
+
+        .phase {
+            .phase__image .phase__image-box {
+                background-color: #172143;
+            }
+        }
+    }
+}
+
+$circleSize: 200px;
+
+.phase {
+    position: relative;
+    display: block;
+    text-align: center;
+
+    @include media-query-min(sm) {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 0.5rem 0;
+        text-align: inherit;
+    }
+
+    @include media-query-max(md) {
+        padding: 1rem 0;
+    }
+
+    @include media-query-min(md) {
+        padding: 2.5rem 0;
+    }
+
+    &:first-child {
+        padding-top: 0 !important;
+        &:before {
+            border-top: none;
+        }
+    }
+
+    &:nth-child(odd) {
+        &:first-of-type {
+            padding-top: 0;
+            &:before {
+                border-top: none;
+            }
+        }
+
+        &:before {
+            @include media-query-min(md) {
+                top: -0.1rem;
+                // left: 6.95rem;
+                left: 6.35rem;
+                // width: 13.96rem;
+                width: 14.76rem;
+                // height: calc(100% + 0.2rem);
+                height: calc(100% + 4px);
+                border: 0.1rem solid #c5c5c5;
+                border-right: none;
+                border-top-left-radius: 1rem;
+                border-bottom-left-radius: 1rem;
+
+                position: absolute;
+                content: "";
+            }
+        }
+
+        & .phase__content {
+            @include media-query-min(md) {
+                padding-left: 2.5rem;
+            }
+        }
+    }
+
+    &:nth-child(even) {
+        &:first-of-type {
+            padding-top: 0;
+            &:before {
+                border-top: none;
+                border-top: none;
+            }
+        }
+
+        &:before {
+            @include media-query-min(md) {
+                top: 0;
+                right: 6.95rem;
+                width: calc(100% - 27.85rem);
+                height: 100%;
+                border: 0.1rem solid #c5c5c5;
+                border-left: none;
+                border-top-right-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+
+                position: absolute;
+                content: "";
+            }
+        }
+
+        & .phase__content {
+            @include media-query-min(md) {
+                padding-left: 2.5rem;
+                padding-right: 4.5rem;
+                padding-left: 0;
+            }
+        }
+
+        & .phase__image {
+            @include media-query-min(md) {
+                left: calc(100% - 220px);
+            }
+        }
+
+        & .phase__content {
+            @include media-query-min(md) {
+                right: 190px;
+            }
+            @include media-query-min(smd) {
+                right: 220px;
+            }
+        }
+
+        &__image {
+            width: 220px;
+            @include media-query-min(md) {
+                position: relative;
+                float: left;
+            }
+        }
+    }
+
+    &__image {
+        width: 220px;
+        position: relative;
+        margin: 0 auto 1.5rem;
+        @include media-query-min(md) {
+            float: left;
+        }
+    }
+
+    &__image-box {
+        width: 180px;
+        height: 180px;
+
+        background: #fff;
+        border: 0.1rem solid #00b4ff;
+        border-radius: 50%;
+
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include media-query-min(md) {
+            width: $circleSize;
+            height: $circleSize;
+        }
+    }
+
+    &__content {
+        position: relative;
+        padding-left: 0;
+        @include media-query-min(sm) {
+            padding-left: 2.5rem;
+        }
+        @include media-query-min(md) {
+            float: left;
+            width: calc(100% - $circleSize);
+            padding-left: 2.5rem;
+        }
+    }
+
+    &:last-child:before {
+        @include media-query-min(md) {
+            height: 50%;
+            border-bottom: none;
+        }
+    }
+}

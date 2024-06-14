@@ -1,0 +1,551 @@
+.blog-title-single {
+    font-size: 35px;
+
+    @include media-query-min(lg) {
+        font-size: 45px;
+    }
+}
+
+.news-section {
+    .pagination {
+        display: inline-flex;
+        margin-left: 20px;
+
+        .page-numbers {
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            line-height: 1.25rem;
+            font-size: 0.875rem;
+            font-weight: 700;
+
+            padding: 0.5rem 1.2rem;
+            align-items: center;
+            border: 1px solid #d2d6dc;
+            color: #374151;
+            transition: all 0.25s ease-in-out;
+            &:hover {
+                color: white;
+                background: #19348d;
+            }
+
+            &.current {
+                background-color: #2c51ca;
+                color: white;
+            }
+        }
+    }
+}
+
+.slideshow {
+    margin-top: calc(50vh - 25vh);
+    padding-bottom: 4vw;
+}
+
+.slide {
+    width: auto;
+    margin-right: 4vw;
+    text-align: center;
+    border-radius: 6px;
+    color: #fff;
+    font-family: "Helvetica Neue", helvetica, arial;
+    font-size: 24px;
+    line-height: 50vh;
+
+    $numItems: 8;
+    $eachDeg: 100deg / $numItems;
+}
+
+#continuous-slider {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-section__address-p p {
+    display: inline;
+}
+
+.Marquee {
+    box-sizing: border-box;
+    padding: 1em;
+    color: white;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    overflow: hidden;
+    max-width: 1170px;
+
+    &-content {
+        display: flex;
+        // animation: marquee 240s linear infinite running;
+    }
+    &-tag {
+        width: auto;
+        margin: 0 0.5em;
+        padding: 0.5em;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translate(-50%);
+    }
+}
+
+.tech-slideshow {
+    height: 100px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+.mover-1 {
+    height: 150px;
+    width: 10000px;
+
+    position: absolute;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+
+    animation: moveSlideshow 3s linear infinite;
+}
+
+.mover-1 div {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100px;
+    margin: 0;
+}
+
+@keyframes moveSlideshow {
+    100% {
+        transform: translateX(-520px);
+    }
+}
+
+.diagonal-marquee {
+    transform: rotate(45deg);
+}
+
+.marquee3k__copy {
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+
+.continuous-slider--wrap {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    overflow: hidden;
+
+    ul {
+        display: block;
+        list-style: none;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    li {
+        display: block;
+        float: left;
+        position: relative;
+        // width: 200px;
+        // height: 200px;
+        width: auto;
+        height: 80px;
+        line-height: 200px;
+        text-align: center;
+    }
+
+    img {
+        vertical-align: middle;
+        max-width: 100%;
+        max-height: 100%;
+        -webkit-transition: 0 linear left;
+        -moz-transition: 0 linear left;
+        transition: 0 linear left;
+        opacity: 0.65;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+// TODO: Very low issue; Should work from bulma css
+// =========================================
+.is-marginless {
+    margin: 0;
+}
+
+.is-paddingless {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+// DUMP of some code... notes.
+// ===========================================
+// background: linear-gradient(90deg,#df39a4 0%,#8c1ff2 100%);
+
+.section ul {
+    // margin-left: 20px;
+    li {
+        list-style: none;
+        position: relative;
+        padding: 0 0 0 20px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 6px;
+            height: 5px;
+            width: 5px;
+            border: 1px solid red;
+            border-width: 2px 2px 0 0;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+// background: linear-gradient(90deg,#fd1990 0%,#aa0281 100%);
+
+//text: 14px, 16px, 18px, 20px, 24px
+
+.et_pb_fullwidth_header .et_pb_fullwidth_header_scroll {
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 30px;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+// arrrrrrrrrowwwxxxxx
+.arrowsxxx {
+    width: 60px;
+    height: 72px;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    bottom: 20px;
+}
+
+.arrowsxxx path {
+    stroke: #d12986;
+    fill: transparent;
+    stroke-width: 1px;
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/ {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.arrowsxxx path.a1 {
+    animation-delay: -1s;
+    -webkit-animation-delay: -1s; /* Safari 和 Chrome */
+}
+
+.arrowsxxx path.a2 {
+    animation-delay: -0.5s;
+    -webkit-animation-delay: -0.5s; /* Safari 和 Chrome */
+}
+
+.arrowsxxx path.a3 {
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s; /* Safari 和 Chrome */
+}
+
+.switcher .option {
+    position: absolute !important;
+}
+
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.header {
+    & .switcher {
+        width: auto !important;
+    }
+
+    & .switcher .notranslate {
+        width: auto !important;
+    }
+
+    & .switcher .selected {
+        position: relative;
+        z-index: 500;
+        @include media-query-min(lg) {
+            border-left: 1px solid #c7c7c7;
+            margin-left: 20px;
+            padding-left: 10px;
+        }
+        background: none !important;
+        // width: 0 !important;
+    }
+
+    & .switcher .selected a {
+        color: #ffffff !important;
+        font-weight: 600 !important;
+        padding: 3px 5px;
+        width: 151px;
+        background: none !important;
+        border: none !important;
+        width: inherit !important;
+        // width: 0 !important;
+    }
+
+    &.is-sticky {
+        & .switcher .selected {
+            position: relative;
+            z-index: 1500 !important;
+            @include media-query-min(lg) {
+                padding-left: 10px;
+                border-left: 1px solid #fff;
+                margin-left: 20px;
+            }
+            background: none !important;
+            width: inherit !important;
+            // width: 0 !important;
+        }
+
+        & .switcher .selected a {
+            // color: #000 !important;
+            font-weight: 600 !important;
+            padding: 3px 5px;
+            width: 151px;
+            background: none !important;
+            border: none !important;
+            // width: 0 !important;
+        }
+    }
+}
+
+.form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+}
+
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #d2d2d2;
+    outline: 0;
+    font-size: 16px;
+    color: #212121;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+    color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+    font-size: 16px;
+    cursor: text;
+    top: 20px;
+}
+
+label,
+.form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 12px;
+    color: #9b9b9b;
+}
+
+.form__field:focus ~ .form__label {
+    color: #9b9b9b;
+}
+
+.form__field:focus {
+    padding-bottom: 6px;
+    border-bottom: 2px solid #fe048b;
+}
+
+.form__group-send {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// custom buttons
+
+// #a70f6b
+
+.twitter {
+    background-color: #fafafa;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: rgba(black, 0.6);
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    text-decoration: none;
+    width: 140px;
+    border-radius: 2px;
+    margin: 1em auto;
+    transition: box-shadow 0.3s linear;
+    &:hover {
+        box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    }
+}
+
+#footer {
+    margin-top: 30px;
+}
+
+@keyframes turning_cw {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.text-vertical-middle {
+    @include media-query-min(md) {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.text-horizontal-center {
+    text-align: center;
+}
+
+// Don't delete
+.text-normal {
+    > ul {
+        list-style: disc;
+    }
+}
+
+.html-overflow-modal {
+    overflow: hidden;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 500;
+    -webkit-transition: all 0.01s;
+    -moz-transition: all 0.01s;
+    -ms-transition: all 0.01s;
+    -o-transition: all 0.01s;
+    transition: all 0.01s;
+    transition-delay: 1s;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.cms-rounded-content-1 {
+    border-radius: 10px;
+}
+
+.slick-initialized .slick-slide {
+    outline: none !important;
+}
+
+@media (max-width: 769px) {
+    /* <== You can change this break point as per your  needs */
+    .reverse-column-mobile {
+        flex-direction: column-reverse;
+        display: flex;
+    }
+}
+.block {
+    overflow: hidden;
+    width: 800px;
+    margin: 50px auto;
+    background: #fff;
+}
+.animation {
+    width: auto;
+    height: 100px;
+    font-size: 0px;
+}
+.animation div {
+    display: inline-block;
+    width: auto;
+    float: none;
+    padding: 0 10px;
+}
+
+// AWS DO NOT DELETE:
+#bitnami-banner {
+    display: none !important;
+}
+
+.switcher .selected a:after {
+    background-image: none !important;
+}

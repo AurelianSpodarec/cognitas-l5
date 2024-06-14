@@ -1,0 +1,36 @@
+// ==========================================================================
+// # Components: Testimonial
+// ==========================================================================
+
+.testimonial {
+    border-bottom: 2px solid #fe048b;
+    width: 320px;
+
+    height: 570px;
+    @include media-query-min(md) {
+        width: 600px;
+        height: 350px;
+    }
+    // padding: 0 20px;
+    margin: 0 20px 37px;
+
+    &__details {
+        margin-bottom: 1.25em;
+        display: flex;
+        align-items: center;
+        flex-flow: row wrap;
+    }
+
+    &__details-name {
+        margin-bottom: 0;
+    }
+
+    &__details-company {
+        color: #a7a9b8;
+        margin-bottom: 0;
+    }
+
+    & .star-rating {
+        margin-left: auto;
+    }
+}

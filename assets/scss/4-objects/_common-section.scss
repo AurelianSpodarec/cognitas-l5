@@ -1,0 +1,114 @@
+// ==========================================================================
+// # Components: Common Section
+// ==========================================================================
+
+.common-section {
+    &__header {
+        text-align: center;
+        margin: 0 auto 80px;
+        @include media-query-min(md) {
+            display: table;
+        }
+
+        &.header-title-left {
+            text-align: center;
+            @include media-query-min(md) {
+                text-align: left;
+            }
+            margin-bottom: 0;
+        }
+    }
+
+    &__header-title {
+        font-weight: bold;
+        margin: 0 0 18px;
+        font-size: 26px;
+        @include media-query-min(md) {
+            font-size: 32px;
+            line-height: 38px;
+        }
+        color: #32325d;
+        &--line {
+            &:after {
+                content: "";
+                display: block;
+                width: 60px;
+                border: 1px solid #fe048b;
+                background-color: #fe048b;
+                margin: 0 auto;
+                margin-top: 7px;
+                transition: 0.3s ease-in-out;
+            }
+        }
+    }
+
+    &__header-title-left {
+        font-weight: bold;
+        margin: 0 0 18px 9px;
+        font-size: 26px;
+        @include media-query-max(md) {
+            text-align: center;
+
+            margin: 0 auto 80px;
+        }
+        @include media-query-min(md) {
+            font-size: 32px;
+            line-height: 38px;
+        }
+        color: #32325d;
+        position: relative;
+
+        // &--line {
+        //     position: relative;
+        //     &:before {
+        //         content: "";
+        //         display: block;
+        //         height: 28px;
+        //         line-height: 30px;
+        //         width: 2px;
+        //         position: absolute;
+        //         left: -9px;
+        //         border-left: 1px solid #fe048b;
+        //         background-color: #fe048b;
+
+        //         margin-top: 7px;
+        //         transition: 0.3s ease-in-out;
+        //     }
+        // }
+        &--line {
+            @include media-query-min(md) {
+                float: left;
+            }
+            &:after {
+                content: "";
+                display: block;
+                width: 60px;
+                border: 1px solid #fe048b;
+                background-color: #fe048b;
+                margin: 0 auto;
+                margin-top: 7px;
+                clear: both;
+                transition: 0.3s ease-in-out;
+            }
+        }
+    }
+
+    &__introText {
+    }
+}
+
+.header-title-left {
+    margin-left: 0;
+}
+
+.header-color {
+    &-1 {
+        color: #32325d;
+    }
+    &-2 {
+        color: #000;
+    }
+    &-3 {
+        color: #fff;
+    }
+}

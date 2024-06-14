@@ -1,0 +1,66 @@
+// ==========================================================================
+// 0-Vendor
+// ==========================================================================
+@import "0-vendor/bulma";
+@import "0-vendor/normalize";
+@import "0-vendor/slick";
+
+// ==========================================================================
+// 1-Abstracts
+// ==========================================================================
+@import "1-abstracts/variables";
+@import "1-abstracts/functions";
+@import "1-abstracts/mixins";
+
+// ==========================================================================
+// 2-Base
+// ==========================================================================
+@import "2-base/base";
+
+// ==========================================================================
+// 3-Layouts
+// ==========================================================================
+@import "3-layouts/footer";
+@import "3-layouts/header";
+@import "3-layouts/header-menu";
+@import "3-layouts/header-search";
+@import "3-layouts/layout";
+@import "3-layouts/mobile-menu";
+
+// ==========================================================================
+// 4-Objects
+// ==========================================================================
+@import "4-objects/buttons";
+@import "4-objects/common-section";
+@import "4-objects/form";
+// ==========================================================================
+// 5-Components
+// ==========================================================================
+@import "5-components/360-key-feature";
+@import "5-components/banner";
+@import "5-components/card";
+@import "5-components/case-studies";
+@import "5-components/client-logos";
+@import "5-components/header-main";
+@import "5-components/home-infographics";
+@import "5-components/licence-table";
+@import "5-components/member";
+@import "5-components/member-modal";
+@import "5-components/header-page";
+@import "5-components/phases";
+@import "5-components/progress-circles";
+@import "5-components/quote";
+@import "5-components/search-modal";
+@import "5-components/special-cta-button";
+@import "5-components/star-rating";
+@import "5-components/testimonial";
+@import "5-components/timeline";
+
+// ==========================================================================
+// 6-Pages
+// ==========================================================================
+@import "6-pages/contact-section";
+@import "6-pages/home-infographics";
+
+// Cheat
+@import "cheat";

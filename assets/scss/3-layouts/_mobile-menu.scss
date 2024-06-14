@@ -1,0 +1,52 @@
+// ==========================================================================
+// # Layouts: Mobile Menu
+// ==========================================================================
+
+.mobile-menu {
+    background-color: #172143;
+    z-index: 10000;
+    height: 100%;
+    width: 80%;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 15px;
+
+    transform: translateX(100%);
+    transition: 0.15s ease-in-out;
+    @include fixed(top 0 right 0 bottom 0);
+
+    @include media-query-min(lg) {
+        display: none;
+    }
+
+    &.is-active {
+        @include media-query-max(lg) {
+            transform: translateX(0);
+        }
+    }
+
+    &__close {
+        color: white;
+        font-size: 41px;
+        text-align: right;
+        svg {
+            font-size: 40px;
+        }
+    }
+
+    &__ul {
+        margin-top: 30px;
+        margin-bottom: 1.8rem;
+    }
+
+    .header-menu {
+        &__link {
+            font-size: 16px;
+            color: #cecece;
+        }
+        &__dropdown-list {
+            position: relative;
+            background-color: #1b264a;
+        }
+    }
+}

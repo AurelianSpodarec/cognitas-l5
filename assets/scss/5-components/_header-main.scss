@@ -1,0 +1,97 @@
+// ==========================================================================
+// # Components: Header Main
+// ==========================================================================
+
+.header-main {
+    position: relative;
+
+    width: 100%;
+    overflow: hidden;
+    height: 400px;
+    @include media-query-min(sm) {
+        height: 600px;
+    }
+    @include media-query-min(lg) {
+        height: 800px;
+    }
+
+    &__title {
+        font-size: 27px;
+        color: white;
+        font-weight: 500;
+        letter-spacing: 2px;
+        margin-bottom: 5px;
+
+        @include media-query-min(sm) {
+            font-size: 45px;
+        }
+
+        @include media-query-min(lg) {
+            font-size: 60px;
+        }
+    }
+
+    &__subtitle {
+        color: white;
+        font-size: 14px;
+        @include media-query-min(md) {
+            font-size: 18px;
+        }
+    }
+
+    &__outer {
+        left: 0px;
+        right: 0px;
+        position: absolute;
+        z-index: 10;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(90deg, rgba(223, 57, 164, 0.1) 0%, rgba(10, 27, 83, 0.4) 100%);
+    }
+
+    &__inner {
+        text-align: center;
+    }
+
+    &__caption-wrap {
+        margin-bottom: -15px;
+    }
+
+    &__background-image {
+        min-height: 400px;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__arrow {
+        > .arrowsxxx {
+            @include media-query-max(md) {
+                bottom: -100px;
+            }
+            @include media-query-min(md) {
+                bottom: 100px;
+            }
+        }
+
+        @include media-query-min(lg) {
+            bottom: 170px;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    &__bottom-graphic {
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 15;
+    }
+}

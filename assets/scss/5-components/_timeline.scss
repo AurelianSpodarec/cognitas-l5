@@ -1,0 +1,206 @@
+// ==========================================================================
+// # Components: Timeline
+// ==========================================================================
+
+.timeline {
+    padding: 30px 0;
+    height: 400px;
+    position: relative;
+    display: flex;
+
+    // &-item .timeline-item__circle {
+    //     &:before {
+    //         content: "";
+    //         position: absolute;
+    //         border: 1px solid #00b5ff;
+    //         height: 100%;
+    //         margin-top: 38px;
+    //         left: 50%;
+    //         &:last-child {
+    //             border: none;
+    //         }
+    //     }
+    //     // &:last-child {
+    //     //     border: none;
+    //     //     &:before {
+    //     //         border: none;
+    //     //     }
+    //     // }
+    // }
+
+    @include media-query-max(smd) {
+        display: block;
+        height: auto;
+    }
+    &:before {
+        display: table;
+        content: " ";
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    &__line {
+        @include media-query-min(smd) {
+            position: absolute;
+            top: 50%;
+            bottom: 50%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background-color: #00b4ff;
+            height: 2px;
+        }
+    }
+
+    &-item__header {
+        display: flex;
+        color: #ef62ac;
+        align-items: center;
+        margin-bottom: 8px;
+
+        & svg {
+            font-size: 18px;
+            margin-right: 8px;
+        }
+    }
+
+    &-item__title {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 0;
+        color: #cc0574;
+    }
+
+    &-item {
+        position: relative;
+
+        @include media-query-max(smd) {
+            width: 100% !important;
+            display: flex;
+        }
+
+        // &__content {
+        //     border-left: 1px solid red;
+        //     margin-left: 25px;
+        // }
+
+        &:last-child .timeline-item__content {
+            border-left: none;
+        }
+
+        // &:last-of-type .timeline-item__circle {
+        //     border: none;
+        //     &:before {
+        //         border: none;
+        //     }
+        // }
+
+        &__content {
+            margin-left: 25px;
+
+            @include media-query-max(smd) {
+                padding-left: 40px;
+                border-left: 1px solid #00b5ff;
+            }
+
+            @include media-query-min(smd) {
+                margin-left: 40px;
+            }
+
+            text-align: left;
+            padding: 0 0 10px 25px;
+            width: 150%;
+            font-size: 13px;
+            @include media-query-min(smd) {
+                margin-top: 30px;
+            }
+
+            @include media-query-max(smd) {
+                width: 100%;
+            }
+        }
+
+        &:last-child {
+            // & .timeline-item__content {
+            //     width: 100%;
+            // }
+        }
+
+        &:nth-child(even) {
+            bottom: 0;
+
+            & .timeline-item {
+                &__circle {
+                    @include media-query-min(smd) {
+                        top: 30px;
+                        left: -2px;
+                    }
+                }
+                &__line {
+                    top: 70px;
+                }
+            }
+        }
+
+        &:nth-child(odd) {
+            @include media-query-min(smd) {
+                top: 50%;
+                bottom: 0;
+            }
+
+            & .timeline-item {
+                &__content {
+                    @include media-query-min(smd) {
+                        margin-top: 70px;
+                    }
+                }
+                &__line {
+                    @include media-query-min(smd) {
+                        height: 90px;
+                    }
+                }
+                &__circle {
+                    @include media-query-min(smd) {
+                        top: 95px;
+                        left: -2px;
+                    }
+                }
+                &__line {
+                    top: 0;
+                }
+            }
+        }
+    }
+
+    &-item__line {
+        right: 0;
+        height: 100px;
+        position: absolute;
+        width: 2px;
+        top: 70px;
+        left: 22px;
+        background: #00b4ff;
+        @include media-query-max(smd) {
+            display: none;
+        }
+    }
+
+    &-item__circle {
+        position: absolute;
+        font-weight: bold;
+
+        // top: 50%;
+        width: 50px;
+        height: 50px;
+        margin-top: -8px;
+        border-radius: 25px;
+        background-color: #00b4ff;
+        z-index: 1;
+        color: #fff;
+        padding-top: 10px;
+        font-size: 20px;
+        text-align: center;
+    }
+}

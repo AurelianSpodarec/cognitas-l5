@@ -1,0 +1,71 @@
+// ==========================================================================
+// # Components: Client Logos
+// ==========================================================================
+
+.client-logos {
+    // align-items: center;
+    // display: flex;
+    // // justify-content: center;
+    // justify-content: end;
+    // flex-wrap: wrap;
+
+    // margin-top: calc(50vh - 25vh);
+    margin-top: 50px;
+    padding-bottom: 4vw;
+    &__item {
+        // max-width: 205px;
+        margin: 40px 0;
+        // flex: 18.5%;
+    }
+    &__img {
+        width: auto;
+        width: 100% "";
+        display: block;
+        padding: 0px 20px;
+        max-height: 60px;
+
+        max-width: 270px;
+    }
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    height: 100px;
+}
+
+.slider__inner {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    height: 100%;
+    width: fit-content;
+    // animation: scroll 200s linear;
+    // animation-iteration-count: infinite;
+}
+
+.slider__li {
+    position: relative;
+    // height: 100px;
+    width: fit-content;
+    text-align: center;
+    max-width: 320px;
+}
+
+.slider__li img {
+    // height: 100px;
+    width: fit-content;
+    object-fit: none;
+}
+
+// @keyframes scroll {
+//     0% {
+//         left: 0px;
+//     }
+//     100% {
+//         left: -15906px;
+//     }
+// }

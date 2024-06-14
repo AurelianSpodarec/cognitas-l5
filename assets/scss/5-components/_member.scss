@@ -1,0 +1,157 @@
+// ==========================================================================
+// # Components: Member
+// ==========================================================================
+
+.member {
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+    &:hover {
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+        & .member__overlay {
+            opacity: 1;
+            visibility: show;
+        }
+        .member {
+            &__name {
+                color: #00b6ff;
+            }
+            &__overlay-button {
+                transform: scale(1);
+            }
+        }
+    }
+
+    &__overlay {
+        opacity: 0;
+        // visibility: hidden;
+        @include absolute(top 0 right 0 bottom 0 left 0);
+        max-width: 350px;
+        height: 98%;
+        background-color: rgba(0, 0, 0, 0.7);
+        margin: 0 auto;
+        transition: 0.3s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__overlay-button {
+        color: white;
+        font-weight: bold;
+        background: #00b6ff;
+        display: inline-block;
+        padding: 11px 25px;
+        border-radius: 8px;
+        transform: scale(0.8);
+        transition: all 0.3s ease-in-out;
+    }
+
+    &__arrow {
+        background-color: white;
+        border-radius: 50%;
+        font-size: 12px;
+        color: #00b5ff;
+        height: 58px;
+        width: 58px;
+        text-align: center;
+        line-height: 69px;
+        margin-right: 20px;
+    }
+
+    &__img-wrap {
+        text-align: center;
+        // max-width: 350px;
+        margin: 0 auto;
+    }
+
+    &__content-wrap {
+        position: relative;
+    }
+
+    &__img {
+        // border-radius: 50%;
+        // border-radius: 10px;
+        // width: 100%;
+        transition: 0.3s ease-in-out;
+
+        width: 100%;
+        transition: 0.3s ease-in-out;
+        max-width: 100%;
+        height: auto;
+    }
+
+    &__img-circle {
+        position: relative;
+    }
+
+    &__heading {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info {
+        padding: 10px 20px;
+    }
+
+    &__name {
+        font-weight: bold;
+        margin-bottom: 0px;
+        color: #00b6ff;
+        font-size: 22px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &__role {
+        font-size: 15px;
+        color: #000;
+        margin-bottom: 6px;
+        font-weight: 500;
+    }
+
+    &__social-icons {
+        display: none;
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    &__text {
+    }
+}
+
+.icon-fb {
+    color: #3b5998;
+    transition: 0.3s ease-in-out;
+    &:hover {
+        color: #079ad1;
+    }
+}
+
+.icon-twitter {
+    color: #00acee;
+    transition: 0.3s ease-in-out;
+    &:hover {
+        color: #079ad1;
+    }
+}
+
+.icon-linkedin {
+    color: #0e76a8;
+    transition: 0.3s ease-in-out;
+    &:hover {
+        color: #079ad1;
+    }
+}
+
+// border-radius: 50%;
+// position: absolute;
+// z-index: 1000;
+// height: 150px;
+// width: 150px;
+// background: transparent;
+// border: 1px solid black;
+// top: 75px;
+// left: 50%;
+// transform: translateX(-50%);

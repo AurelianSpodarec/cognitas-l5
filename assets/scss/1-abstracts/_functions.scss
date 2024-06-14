@@ -1,0 +1,24 @@
+// ==========================================================================
+// # Variables
+// ==========================================================================
+
+//
+// Table of Content:
+//
+//  - Breakpoints
+//
+//
+//
+//
+//
+//
+//
+//
+
+@function font-size($size) {
+    @return ($fontSizes, $size);
+}
+
+@function z($layer) {
+    @return map-get($z-indexes, $layer);
+}

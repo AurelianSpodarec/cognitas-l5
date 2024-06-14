@@ -1,0 +1,31 @@
+// ==========================================================================
+// # Components: Quote
+// ==========================================================================
+
+.quote {
+    color: white;
+    background-color: #161d57;
+    padding: 40px 15px;
+
+    @include media-query-min(sm) {
+        padding: 60px 35px;
+    }
+    @include media-query-min(md) {
+        padding: 80px 35px;
+    }
+    @include media-query-min(lg) {
+        padding: 100px;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    &__author {
+        text-align: center;
+        font-size: 19px;
+    }
+}

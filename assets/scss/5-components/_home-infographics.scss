@@ -1,0 +1,18 @@
+// ==========================================================================
+// # Components: Home Infographics
+// ==========================================================================
+
+.home-infographics {
+    &--image-wrap {
+        display: none;
+        @include media-query-min(sm) {
+            display: block !important;
+        }
+    }
+
+    &--columns {
+        @include media-query-min(sm) {
+            display: none !important;
+        }
+    }
+}

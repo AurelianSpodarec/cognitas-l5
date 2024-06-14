@@ -1,0 +1,68 @@
+// ==========================================================================
+// # Components: Case Studies
+// ==========================================================================
+
+.case-studies {
+    height: 100%;
+    // box-shadow: rgba(25, 28, 31, 0.08) 0px 14px 32px, rgba(25, 28, 31, 0.04) 0px 8px 16px, #191c1f0a 0px -1px 0px;
+    // box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3),
+    //     0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+    box-shadow: 0 13px 15px -5px rgba(50, 50, 93, 0.25), 0 8px 7px -8px rgba(0, 0, 0, 0.3),
+        0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+    transition: 0.3s ease-in-out;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    &:hover {
+        box-shadow: 0 30px 18px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3),
+            0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+        transform: translateY(-3px);
+    }
+
+    &__heading {
+        display: block;
+        overflow: hidden;
+
+        a {
+            min-height: 260px;
+            display: block;
+        }
+
+        img {
+            object-fit: cover;
+            height: 260px;
+            border-radius: 4px;
+            min-height: 260px;
+            width: 100%;
+        }
+    }
+
+    &__content {
+        padding: 20px;
+        min-height: 230px;
+        position: relative;
+    }
+
+    &__title p {
+        color: black;
+    }
+
+    &__read-more {
+    }
+
+    &__link {
+        position: absolute;
+        bottom: 10px;
+        color: #c70f7d;
+        &:after {
+            font: normal 16px;
+            content: "\2192";
+            padding-left: 5px;
+        }
+    }
+}
+
+.js-hook_slider-case-studies .slick-list {
+    overflow: unset;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}

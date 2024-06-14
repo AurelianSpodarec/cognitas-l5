@@ -1,0 +1,218 @@
+   <form>
+            
+            <div class="columns">
+                <div class="column is-half">
+                <div class="form__group">
+                    <!-- <input type="name" id="name" class="form__field" placeholder="Name"> -->
+                    [text name id:name class:form__field placeholder "Name"]
+                    <label for="name" class="form__label">Name</label>
+                </div>
+                </div>
+                <div class="column is-half">
+                <div class="form__group">
+                    <!-- <input type="email" id="email" class="form__field" placeholder="Email"> -->
+                    [email your-email id:your-email class:form__field  placeholder"Email"]
+                    <label for="your-email" class="form__label">Email</label>
+                </div>
+                </div>
+            </div>
+ 
+
+            
+            <div class="columns">
+                <div class="column is-half">
+                <div class="form__group">
+                    [tel your-mobile id:your-mobile class:form__field  placeholder"Phone Number"]
+                    <label for="your-mobile" class="form__label">Phone number</label>
+                </div>
+                </div>
+                <div class="column is-half">
+                <div class="form__group">
+                    [text* your-company id:your-company class:form__field  placeholder"Company/Organization"]
+                    <label for="your-company " class="form__label">Company/Organization</label>
+                </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="columns">
+                <div class="column is-full">
+                <div class="form__group">
+                    [text* your-country id:your-country class:form__field  placeholder"Country"]
+                    <label for="country" class="form__label">Country</label>
+                </div>
+                </div>
+            </div>
+
+
+
+            <div class="columns">
+            <div class="column">
+                <div class="form__group">
+                     [textarea* your-message id:your-message class:form__field  placeholder"Your Message"]
+                    <label for="message" class="form__label">Your Message</label>
+                </div>
+            </div>
+            </div>
+
+
+            <div class="form__group-send">
+
+                <label class="checkbox">
+                    <!-- <input type="checkbox"> -->
+                    [checkbox* checkbox-730 "By using this form you agree with the storage and handling of your data by this website."]
+                    <!-- <span style="font-size: 15px;">By using this form you agree with the storage and handling of your data by this website.</span>  -->
+                </label>
+            
+                 
+                [submit class:btn class:btn-02 "SEND"]
+            </div>
+
+        </form> 
+
+
+
+
+
+
+
+        <div class="columns">
+                <div class="column is-half">
+                <div class="form__group">
+                   [text* your-name id:your-name class:form__field placeholder "Name"]
+                    <label for="your-name" class="form__label">Name</label>
+                </div>
+                </div>
+                <div class="column is-half">
+                <div class="form__group"> 
+                    [email* your-email id:your-email class:form__field  placeholder"Email"]
+                    <label for="your-email" class="form__label">Email</label>
+                </div>
+                </div>
+            </div>
+          
+
+
+            
+           <div class="columns">
+                <div class="column is-half">
+                <div class="form__group">
+                    [tel* your-mobile id:your-mobile class:form__field  placeholder"Phone Number"]
+                    <label for="your-mobile" class="form__label">Phone number</label>
+                </div>
+                </div>
+                <div class="column is-half">
+                <div class="form__group">
+                    [text* your-company id:your-company class:form__field  placeholder"Company/Organization"]
+                    <label for="your-company " class="form__label">Company/Organization</label>
+                </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="columns">
+                <div class="column is-full">
+                <div class="form__group">
+                    [text your-country id:your-country class:form__field  placeholder"Country"]
+                    <label for="country" class="form__label">Country</label>
+                </div>
+                </div>
+            </div>
+
+
+
+            <div class="columns">
+            <div class="column">
+                <div class="form__group">
+                     [textarea* your-message id:your-message class:form__field  placeholder"Your Message"]
+                    <label for="message" class="form__label">Your Message</label>
+                </div>
+            </div>
+            </div>
+
+
+            <div class="form__group-send">
+
+                <label class="checkbox"> 
+                    [checkbox* checkbox-730 "By using this form you agree with the storage and handling of your data by this website."]
+               </label>
+            
+                 
+                [submit class:btn class:btn-02 "SEND"]
+            </div>
+
+
+
+
+            // RECENT
+
+            <div class="columns">
+                <div class="column is-half">
+                <div class="form__group">
+                   [text* your-name id:your-name class:form__field placeholder "Name"]
+                    <label for="your-name" class="form__label">Name</label>
+                </div>
+                </div>
+                <div class="column is-half">
+                <div class="form__group"> 
+                    [email* your-email id:your-email class:form__field  placeholder"Email"]
+                    <label for="your-email" class="form__label">Email</label>
+                </div>
+                </div>
+            </div>
+          
+
+
+            
+           <div class="columns">
+                <div class="column is-half">
+                <div class="form__group">
+                    [tel* your-mobile id:your-mobile class:form__field  placeholder"Phone Number"]
+                    <label for="your-mobile" class="form__label">Phone number</label>
+                </div>
+                </div>
+                <div class="column is-half">
+                <div class="form__group">
+                    [text* your-company id:your-company class:form__field  placeholder"Company/Organization"]
+                    <label for="your-company" class="form__label">Company/Organization</label>
+                </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="columns">
+                <div class="column is-full">
+                <div class="form__group">
+                    [text your-country id:your-country class:form__field  placeholder"Country"]
+                    <label for="your-country" class="form__label">Country</label>
+                </div>
+                </div>
+            </div>
+
+
+
+            <div class="columns">
+            <div class="column">
+                <div class="form__group">
+                     [textarea* your-message id:your-message class:form__field  placeholder"Your Message"]
+                    <label for="your-message" class="form__label">Your Message</label>
+                </div>
+            </div>
+            </div>
+
+
+            <div class="form__group-send">
+
+                <label class="checkbox"> 
+                    [checkbox* checkbox-730 "By using this form you agree with the storage and handling of your data by this website."]
+               </label>
+            
+                 
+                [submit class:btn class:btn-02 "SEND"]
+            </div>

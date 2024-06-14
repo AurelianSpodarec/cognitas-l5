@@ -1,0 +1,165 @@
+// ==========================================================================
+// # Components: Member Modal
+// ==========================================================================
+
+.member-modal {
+    position: fixed;
+    z-index: 999999;
+    // background-color: rgba(0, 180, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.65);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    // display: none;
+    @include media-query-max(lg) {
+        overflow: scroll;
+    }
+
+    &__close-button {
+        background: #3dbff9;
+        color: white;
+        border-radius: 50%;
+        line-height: 53px;
+        font-size: 30px;
+
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        position: absolute;
+        right: 0;
+        margin: 15px;
+        cursor: pointer;
+        position: fixed;
+
+        @include media-query-min(smd) {
+            position: absolute;
+            right: -30px;
+            top: -30px;
+        }
+    }
+
+    &__box {
+        border-radius: 6px;
+        @include media-query-max(smd) {
+            height: 100vh;
+            overflow: scroll;
+        }
+        @include media-query-min(smd) {
+            width: 100%;
+            width: calc(100% - 60px);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-height: 610px;
+        }
+
+        @include media-query-min(lg) {
+            min-width: 600px;
+            max-width: 900px;
+        }
+        margin: 0 auto;
+        background-color: white;
+
+        @include media-query-min(smd) {
+            display: flex;
+        }
+    }
+
+    &__avatar-wrap {
+        min-width: 350px;
+        background-color: #000000;
+
+        @include media-query-max(smd) {
+            display: none;
+        }
+        @include media-query-min(smd) {
+            border-right: 1px solid #e5e5e5;
+            display: block;
+        }
+        // border-right: 2px solid black;
+    }
+
+    &__avatar-button {
+        display: none;
+
+        @include media-query-min(smd) {
+            display: block;
+        }
+    }
+
+    &__avatar-img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        &--mobile {
+            object-fit: cover;
+            text-align: center;
+
+            @include media-query-min(smd) {
+                display: none;
+                border-top-left-radius: 6px;
+                border-bottom-left-radius: 6px;
+            }
+
+            @include media-query-max(smd) {
+                // height: 250px;
+                width: 250px;
+            }
+        }
+    }
+
+    &__content {
+        padding: 15px;
+        @include media-query-min(smd) {
+            padding: 30px;
+        }
+        @include media-query-min(lg) {
+            padding: 50px 50px 30px;
+        }
+    }
+
+    &__header {
+        margin-bottom: 30px;
+        @include media-query-max(lg) {
+            // display: flex;
+            text-align: center;
+        }
+        // align-items: end;
+        // justify-content: space-between;
+    }
+
+    &__header-info {
+        @include media-query-min(lg) {
+            display: flex;
+        }
+        width: 100%;
+        align-items: end;
+        justify-content: space-between;
+    }
+
+    &__icons {
+        font-size: 25px;
+    }
+
+    &__section {
+        @include media-query-max(smd) {
+            text-align: center;
+        }
+        @include media-query-min(smd) {
+            overflow-y: auto;
+            max-height: 415px;
+        }
+    }
+
+    &__name {
+        font-weight: bold;
+        font-size: 34px;
+        margin-bottom: 5px;
+    }
+    &__position {
+    }
+}

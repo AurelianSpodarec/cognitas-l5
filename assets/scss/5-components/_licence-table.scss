@@ -1,0 +1,112 @@
+// ==========================================================================
+// # Components: Licence Table
+// ==========================================================================
+
+.licence-table {
+    &__wrap {
+        @include media-query-max(lg) {
+            overflow: auto;
+            overflow-y: hidden;
+            max-width: 100%;
+        }
+    }
+
+    width: 100%;
+    background-color: white;
+    border-collapse: collapse;
+    width: 100%;
+
+    border-collapse: collapse;
+    overflow: hidden;
+
+    &__thead-th-icon-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__thead-th-icon {
+        font-size: 100px;
+        margin-bottom: 10px;
+        padding-top: 40px;
+    }
+
+    thead {
+        text-align: center;
+
+        th {
+            // border-right: 1px solid #00b4ff;
+            border-bottom: 1px solid #00b4ff;
+            padding: 20px 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            color: black;
+            text-transform: uppercase;
+            background-color: rgba(255, 255, 255, 0.2);
+            &:first-child {
+                text-align: left;
+            }
+        }
+    }
+
+    tbody {
+        text-align: center;
+
+        & tr {
+            border-bottom: 1px solid #00b4ff;
+            border-bottom: solid 1px #00b4ff;
+            &:last-child {
+                border-bottom: 0;
+                border-bottom: none;
+            }
+            &:hover {
+                background-color: rgba(247, 201, 225, 0.8);
+            }
+
+            & td {
+                text-align: center;
+                border-right: 1px solid #00b4ff !important;
+
+                padding: 15px;
+                vertical-align: middle;
+                font-weight: 300;
+                font-size: 14px;
+                color: black;
+
+                font-weight: 500;
+                background-color: rgba(255, 255, 255, 0.2);
+
+                & > img {
+                    max-width: 22px;
+                }
+
+                &:hover {
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: -9999px;
+                        bottom: -9999px;
+                        background-color: rgba(247, 201, 225, 0.5);
+                        z-index: -1;
+                    }
+                }
+
+                &:first-child {
+                    text-align: left;
+                    font-weight: bold;
+                    color: #cc0574;
+                    font-size: 15px;
+                }
+                &:last-child > {
+                    border-right: 0;
+                }
+                & .unchecked {
+                    // color: #ccc;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

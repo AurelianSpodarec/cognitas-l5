@@ -1,0 +1,24 @@
+{
+    "name": "l5-cognitas-theme",
+    "version": "0.1.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "gulp watch",
+        "build": "gulp build"
+    },
+    "author": "Level 5",
+    "license": "ISC",
+    "dependencies": {
+        "browser-sync": "^2.26.7",
+        "bulma": "^0.9.0",
+        "gulp": "^4.0.2",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-inject": "^5.0.5",
+        "gulp-sass": "^4.1.0",
+        "gulp-sourcemaps": "^2.6.5",
+        "gulp-uglify": "^3.0.2",
+        "particles.js": "^2.0.0"
+    }
+}

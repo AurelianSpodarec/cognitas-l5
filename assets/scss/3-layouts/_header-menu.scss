@@ -1,0 +1,204 @@
+// ==========================================================================
+// # Layouts: Header Menu
+// ==========================================================================
+
+.header-menu {
+    @include media-query-max(lg) {
+        transform: translateX(100%);
+        transition: 0.15s ease-in-out;
+        @include fixed(top 0 right 0 bottom 0 left 0);
+        background-color: black;
+    }
+
+    &.is-active {
+        @include media-query-max(lg) {
+            transform: translateX(0);
+        }
+    }
+
+    transition: all 1s;
+    opacity: 1;
+    transform: translateY(0);
+    // opacity: 0;
+    animation-direction: alternate;
+    &--search-open {
+        animation: fadeToBottom 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+        opacity: 0;
+    }
+    &__wrap {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    &__nav {
+        height: 100%;
+    }
+    &__ul {
+        padding: 30px;
+        margin: 0;
+        list-style: none;
+        @include absolute(top 0 right 0 bottom 0 left 0);
+        @include media-query-max(md) {
+            overflow-y: auto;
+        }
+        position: relative;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+
+        @include media-query-min(md) {
+            display: flex;
+        }
+
+        & .current-menu-ancestor,
+        & .current-menu-item {
+            // background: #d3379f;
+            // border: 2px solid #d3379f;
+            & span {
+                position: relative;
+
+                &:after {
+                    content: " ";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: -7px;
+                    width: 75%;
+                    margin: 0 auto;
+                    height: 2px;
+                    background-color: #cc0575;
+                    transition: all 0.5s;
+                    transform-origin: left;
+                }
+            }
+
+            color: white;
+            border-radius: 20px;
+            & a {
+                color: white;
+                border: none;
+            }
+        }
+
+        & .current-menu-ancestor .current-menu-item {
+            background: inherit;
+            border: none;
+            color: black;
+            & a {
+                color: black;
+            }
+        }
+
+        & .current-menu-ancestor .header-menu__dropdown-list a {
+            color: #c3c3c3;
+            border: none;
+
+            &:hover {
+                color: black;
+            }
+        }
+    }
+
+    &__li {
+        position: relative;
+    }
+
+    &__link {
+        display: block;
+        // color: #e3e3e3;
+        color: #c3c3c3;
+        padding: 0 1rem;
+        display: block;
+        position: relative;
+        padding: 0 1rem;
+        letter-spacing: 1px;
+        position: relative;
+        // padding-top: 10px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        font-size: 13px;
+        transition: color 0.2s ease 0s;
+        // text-transform: uppercase;
+
+        line-height: 3rem;
+        // display: block;
+        // color: white;
+        // &:visited {
+        //     color: color: rgb(139, 149, 158);;
+        // }
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    &__dropdown-list {
+        @include media-query-max(md) {
+            position: relative;
+        }
+
+        transform: translateX(-10px);
+
+        display: none;
+
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: absolute;
+        // display: flex;
+        // display: none;
+        left: 0;
+        top: 100%;
+        // width: 100%;
+
+        box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 4px 0px, rgba(0, 0, 0, 0.08) 0px 8px 16px 0px;
+        position: absolute;
+        left: 0px;
+        top: 100%;
+        background: rgb(255, 255, 255);
+        border-radius: 0.3rem;
+        padding: 0.25rem 0px;
+        min-width: 180px;
+        transition: 0.4s ease-in-out;
+        opacity: 0;
+
+        &.is-block {
+            display: block;
+        }
+
+        &.is-opacity {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0px);
+        }
+
+        & .current-menu-ancestor,
+        & .header-menu__li .header-menu__link {
+            // background: #d3379f;
+            // border: 2px solid #d3379f;
+            & span {
+                position: relative;
+
+                &:after {
+                    content: " ";
+                    display: none;
+                }
+            }
+        }
+
+        & a {
+            color: rgb(139, 149, 158);
+            font-weight: 400;
+            padding: 12px 5px;
+            line-height: 1.5rem;
+            transition: color 0.2s ease 0s;
+
+            min-width: 13rem;
+            padding: 0.8rem 1.6rem;
+            &:hover {
+                color: black;
+            }
+        }
+    }
+}

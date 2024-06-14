@@ -1,0 +1,20 @@
+// ==========================================================================
+// # Components: Star Rating
+// ==========================================================================
+
+.star-rating {
+    & ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    & li {
+        color: #ff048c; // refined brand color
+        display: inline-block;
+        font-size: 1em;
+        line-height: 1.5em;
+        letter-spacing: 0.1em;
+        margin: 0;
+    }
+}

@@ -1,0 +1,73 @@
+// ==========================================================================
+// # Components: Buttons
+// ==========================================================================
+
+// TODO: Create different button colors, outline, full, hovers, etc...
+.btn {
+    // padding: 12px 20px;
+    padding: 15px 28px;
+    margin-right: 6px;
+    border-radius: 4px;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+.btn-02 {
+    border: 2px solid #cc0574;
+    background: none;
+    color: #fff;
+    box-shadow: inset 0 0 0 100px #cc0574;
+    transition: all 0.3s ease-out;
+    border-radius: 24px;
+    margin-bottom: 10px;
+    &:hover {
+        cursor: pointer;
+        color: #cc0574;
+
+        box-shadow: inset 0 0 10px -10px rgba(23, 138, 203, 0);
+    }
+}
+
+// create outline and solid
+
+.button {
+    margin-bottom: 10px;
+    border: none;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 0 0 0 100px #cc0574;
+    transition: all 0.3s ease-out;
+
+    font-size: 1rem;
+    line-height: 1;
+
+    border-radius: 4rem;
+    outline: 0;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #d3007d;
+    color: #fff;
+    padding: 18px 32px;
+    background: #d3007d;
+    box-shadow: inset 0 0 10px -10px rgba(23, 138, 203, 0);
+
+    transition: all 0.3s ease-out;
+
+    &:hover {
+        cursor: pointer;
+        // color: black;
+        background: white;
+        color: black;
+        border: 2px solid #d3007d;
+        box-shadow: inset 0 0 10px -10px rgba(23, 138, 203, 0);
+        box-shadow: 0 10px 18px rgba(236, 6, 142, 0.35);
+    }
+
+    &--hover-1 {
+        border: 2px solid #920257;
+        &:hover {
+            background-color: #ea0f91;
+            color: white;
+        }
+    }
+}

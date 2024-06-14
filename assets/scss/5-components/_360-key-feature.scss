@@ -1,0 +1,38 @@
+// ==========================================================================
+// # Components: 360 Key Features
+// ==========================================================================
+
+.key-feature-360 {
+    height: 225px;
+
+    @include media-query-min(smd) {
+        height: 330px;
+    }
+    @include media-query-min(lg) {
+        height: 333px;
+    }
+    @include media-query-min(xl) {
+        height: 255px;
+    }
+    border-bottom: 2px solid #fe048b;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    &__icon i,
+    &__icon svg {
+        color: #f16eb1;
+    }
+
+    &__title {
+        margin-bottom: 0;
+        margin-left: 10px;
+        font-weight: 500;
+    }
+
+    &__p {
+    }
+}
